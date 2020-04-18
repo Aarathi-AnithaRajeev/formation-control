@@ -10,7 +10,7 @@ vi=randi([-2,2],1,8);
 
 time=[0 10];
 init=[x0;v0;xi';vi'];
-[t,z]=ode23('EE5329_exam2',time,init);
+[t,z]=ode23('form_control',time,init);
 
 plot(z(:,5),z(:,6));
 hold on
@@ -32,7 +32,7 @@ xlabel('x-axis')
 ylabel('y-axis')
 legend('1','2','3','4','5')
 
-function [z_dot]=EE5329_exam2(t,z1)
+function [z_dot]=form_control(t,z1)
 
 c=2;            %Coupling Gain
 Kp=eye(2);      %Proportional Gain
